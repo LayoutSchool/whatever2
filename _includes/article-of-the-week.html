@@ -1,0 +1,25 @@
+<div class="col-12">
+    <h2 class="h6 pt-2 text-white p-1 bg-secondary d-inline-block mb-3">ARTICLE OF THE WEEK</h2>
+    <div class="row">
+    {% for post in site.posts %}
+        {% if post.aotw %}
+        <div class="col-sm-6">
+            <p class="font14 aotw">
+               Category: <span class="text-uppercase">{{ post.categories }}</span>
+            </p>
+            <a href="{{ post.url }}" class="aotw">
+                <h3 class="h3">{{ post.title }}</h3>
+                <div class="block-with-text">{{ post.excerpt }}</div>
+            </a>
+
+        </div>
+        <div class="col-sm-6"> 
+            <a href="{{ post.url }}" class="aotw">
+                <img class="img-fluid mt-4" src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
+            </a>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div><!-- .col-12.col-md-8 -->
+    

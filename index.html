@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% comment %}
+    {% include signup-gray-secondary.html %}
+{% endcomment %}
+
+{% comment %}
+    {% include breadcrumbs.html %}
+{% endcomment %}
+
+{% comment %}
+    {% include promo-homepage.html %}
+{% endcomment %}
+
+{% comment %}
+    {% include promo-homepage2.html %}
+{% endcomment %}
+
+<div class="container-fluid pt-5 pb-5 bg-light-gray">
+    <div class="container">
+            <div class="row">
+                {% include article-of-the-week.html %}
+            </div><!--row -->
+    </div><!-- container -->
+</div>
+
+<div class="container-fluid pt-5 pb-5 bg-white">
+	<div class="container">
+		  	<div class="row">
+                {% include index-post-loop.html %}
+                {% comment %}
+                    {% include sitewide-sidebar.html %}
+                {% endcomment %}
+            </div><!--row -->
+	</div><!-- container -->
+</div>
+
+{% include signup-gray-secondary.html %}
+
+<div class="container-fluid pt-5 pb-5 bg-white">
+    <div class="container">
+        <div class="row">
+            {% include index-post-loop2.html %}
+        </div><!--row -->
+	</div><!-- container -->
+</div>
+
+{% comment %}
+    {% include signup-gray-secondary.html %}
+{% endcomment %}
+<!-- Footer -->	
+{% include footer.html %}

@@ -1,0 +1,32 @@
+# Site Settings
+title: JobFreeJourney.com
+email: contact@jobfreejourney.com
+description: > # this means to ignore newlines until "baseurl:"
+  JobFreeJourney.com,  build income streams while working 9-to-5
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jobfreejourney.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title
+highlighter: rouge
+
+#Site Details
+license: ""
+license-url: ""
+author: "JobFreeJourney"
+
+# Jekyll Redirect From Plugin for Redirects from redirect_from in template-overviews/blog-with-sidebar
+gems:
+  - jekyll-redirect-from
+
+# Pagination
+paginate: 3
+
+# Compile to css from this folder, :nested, :compact, :expanded, :compressed
+sass:
+  sass_dir: scss
+  style: :nested
