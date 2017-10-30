@@ -1,3 +1,3 @@
-# [JobFreeJourney.com](http://www.jobfreejourney.com)
+# [LayoutSchool.com](http://www.layoutschool.com)
 
-Build income streams while working 9-to-5
+Learn Front-end Web Development
