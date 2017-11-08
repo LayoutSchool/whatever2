@@ -27,12 +27,29 @@ show: true
 <p data-height="435" data-theme-id="0" data-slug-hash="WXowYV" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="CSS positioning, static" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/WXowYV/">CSS positioning, static</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+<p>
+Using static positioning, you cannot offset elements with top, right, bottom, and left properties. In order to be able to use these offset properties, you need a different kind of positioning.
+</p>
+
 <h2>POSITION: RELATIVE</h2>
-<p></p>
 
-<p></p>
+<p>Using the value of relative on the CSS position property, we now have at our displosal the four offset properties.</p>
+<p>In the example that follows, we'll use the same code like we did in the previous example, with a slight twist: we'll change the positioning to relative, and we'll offset the wrapper by 100 pixels from the left side.</p>
 
-<p></p>
+<p>Note that we're also adding the offset property of left to box-2 and box-3.</p>
+
+<p data-height="428" data-theme-id="0" data-slug-hash="vWyXxL" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="CSS positioning, relative" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/vWyXxL/">CSS positioning, relative</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+<h2>POSITION: ABSOLUTE</h2>
+
+<p>When you position an element absolutely, you take it out of the normal document flow.</p>
+
+<p>For example, we have set the wrapping .box to position: static, and then .box-1 to position: absolute. <p>That way, we've taken it out of the normal document flow, so that the other divs are painted on the viewport as if the absolutely positioned element did not even exist.</p><p> This is what happens when you take an element out of the normal document flow.</p>
+
+<p data-height="424" data-theme-id="0" data-slug-hash="rYWMYP" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="CSS positioning, absolute" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/rYWMYP/">CSS positioning, absolute</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 <p></p>
 
