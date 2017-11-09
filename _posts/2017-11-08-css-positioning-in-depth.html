@@ -46,31 +46,29 @@ Using static positioning, you cannot offset elements with top, right, bottom, an
 
 <p>When you position an element absolutely, you take it out of the normal document flow.</p>
 
+<p>Absolutely positioning an element is as if you've tacked that element onto a web page.</p>
+
 <p>For example, we have set the wrapping .box to position: static, and then .box-1 to position: absolute. <p>That way, we've taken it out of the normal document flow, so that the other divs are painted on the viewport as if the absolutely positioned element did not even exist.</p><p> This is what happens when you take an element out of the normal document flow.</p>
 
 <p data-height="424" data-theme-id="0" data-slug-hash="rYWMYP" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="CSS positioning, absolute" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/rYWMYP/">CSS positioning, absolute</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<p></p>
+<h2>POSITION: FIXED</h2>
 
-<p></p>
+<p>Giving an elements position property the value of fixed is similar to pasting that element on the screen itself.</p>
 
-<p></p>
+<p>So, while absolute positioned elements are positioned in terms of the page they are on, they still move with the page. When elements are fixed, they will remain in their place even as the page scrolls.</p>
 
-<h3>Level 2 front-end web developer</h3>
-<ol>
-    <li>HTML: Understand the difference between HTML4 and HTML5</li>
-    <li>HTML: What are semantic tags in HTML</li>
-    <li>HTML: What is SVG</li>
-    <li>CSS: Understand the CSS cascade</li>
-    <li>CSS: Understand CSS specificity</li>
-    <li>CSS: Know what pseudo-classes are and how to use them</li>
-    <li>CSS: Understand the box model and be able to manipulate it</li>
-    <li>CSS: Understand CSS positioning and be able to use it</li>
-    <li>JS: Be able to preventDefault on button submit</li>
-    <li>JS: Know JavaScript primitives: Strings, Numbers, Null, Undefined, Boolean, and Symbol</li>
-    <li>JS: Using jQuery, make an element appear and disappear on click</li>
-</ol>
+<p>What follows is an example of a fixed element (the green-colored box).</p>
+
+<p>To the left of this fixed green-colored box, we have an absolutely positioned red box, which is taken out of the normal document flow and thus covers the statically positioned blue box.</p>
+
+<p>Note however, that both the blue and the red boxes are moving <em>with the page</em>, while the green box remains fixed to the screen.</p>
+
+<p data-height="373" data-theme-id="0" data-slug-hash="Kyadzp" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="CSS positioning, fixed" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/Kyadzp/">CSS positioning, fixed</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
 
 <!--
 <p>asdf</p>
