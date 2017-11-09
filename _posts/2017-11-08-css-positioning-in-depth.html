@@ -48,7 +48,9 @@ Using static positioning, you cannot offset elements with top, right, bottom, an
 
 <p>Absolutely positioning an element is as if you've tacked that element onto a web page.</p>
 
-<p>For example, we have set the wrapping .box to position: static, and then .box-1 to position: absolute. <p>That way, we've taken it out of the normal document flow, so that the other divs are painted on the viewport as if the absolutely positioned element did not even exist.</p><p> This is what happens when you take an element out of the normal document flow.</p>
+<p>For example, we have set the wrapping .box to position: static, and then .box-1 to position: absolute. <p>That way, we've taken it out of the normal document flow, so that the other divs are painted on the viewport as if the absolutely positioned element did not even exist.</p>
+<p>However, since it does exist, and since it is the last div element on the page, it covers all the other divs that are using display:static, i.e. that are part of the normal document flow.</p>
+<p> This is what happens when you take an element out of the normal document flow.</p>
 
 <p data-height="424" data-theme-id="0" data-slug-hash="rYWMYP" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="CSS positioning, absolute" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/rYWMYP/">CSS positioning, absolute</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
