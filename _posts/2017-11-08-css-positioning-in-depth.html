@@ -16,7 +16,7 @@ show: true
 <p>The first thing to know is to have a general idea of how CSS positioning works. This includes knowing about the normal document flow in a web page: Left-to-right, top-to-bottom (of course, if your web page is in an RTL language, the flow will be right-to-left).</p>
 
 
-<p>Most layouts are made by manipulating this normal document flow.</p>
+<p>CSS layouts are made by manipulating this normal document flow.</p>
 
 <p>We have three major CSS properties at our disposal, to manipulate normal document flow in a web page. These properties are: <strong>float</strong>, <strong>position</strong>, and <strong>display</strong>.</p>
 
@@ -27,13 +27,13 @@ show: true
 <h2 class="h2 mt-5">The available values for CSS position property</h2>
 Position property in CSS can hold the following values:
 <ul>
+    <li>static</li>
+    <li>relative</li>
     <li>absolute</li>
     <li>fixed</li>
+    <li>sticky</li>
     <li>inherit</li>
     <li>initial</li>
-    <li>relative</li>
-    <li>static</li>
-    <li>sticky</li>
     <li>unset</li>
 </ul>
 
@@ -108,4 +108,19 @@ Using static positioning, you cannot offset elements with top, right, bottom, an
 <p>
     Giving an element a value of position: initial is the same as if we gave it position: static, as position: static is the default value for all HTML elements.
 </p>
+
+<h2 class="h2 mt-5 text-uppercase">POSITION: UNSET</h2>
+<p>
+    Unset is sort of a hybrid value, in the sense that it is a combination of behaviors of the initial and inherit properties.
+</p>
+<p>
+    You can think of it as a sort of an if-statement, as the result of using it will be different based on the context it is used in.
+</p>
+<ul>
+    The way that it works is as follows:
+    <li>If an element inherits the property from a parent element, using unset CSS value will revert the property to the inherited value.</li>
+    <li>If an element does not inherit the property from its parent element, using unset CSS value will revert the property to the initial value.</li>
+</ul>
+<p>In the specific case of position property, we need to take a few things into account:</p>
+
 
