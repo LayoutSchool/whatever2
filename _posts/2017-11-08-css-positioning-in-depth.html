@@ -20,6 +20,21 @@ show: true
 
 <!--more-->
 
+<h2 class="h2 mt-5">The available values for CSS position property</h2>
+Position property in CSS can hold the following values:
+<ul>
+    <li>absolute</li>
+    <li>fixed</li>
+    <li>inherit</li>
+    <li>initial</li>
+    <li>relative</li>
+    <li>static</li>
+    <li>sticky</li>
+    <li>unset</li>
+</ul>
+
+<p>We will start this article by looking at what all of these position properties do and how to apply them in practice.</p>
+
 <h2 class="h2 mt-5 text-uppercase">POSITION: STATIC</h2>
 
 <p>HTML elements start their life on a web page with the value of static on their position property. Static is just the normal positioning behavior of HTML elements.</p>
@@ -73,4 +88,20 @@ Using static positioning, you cannot offset elements with top, right, bottom, an
 <h2 class="h2 mt-5 text-uppercase">POSITION: STICKY</h2>
 
 <p>Position sticky is a combination of relative and fixed positioning principles. Basically, an element with position: sticky, behaves just like a relatively positioned element, until it reaches a certain part of the web page, at which time it behaves as if it's position was set as <em>property:fixed</em>.</p>
+
+<h2 class="h2 mt-5 text-uppercase">POSITION: INHERIT</h2>
+<p>
+    If you want an element to inherit it's parent's position property's value, you use position: inherit. What's interesting about the position property is that it does not cascade, so using position: inherit changes that default behavior.
+</p>
+
+<h2 class="h2 mt-5 text-uppercase">POSITION: INITIAL</h2>
+<p>
+    As a value, initial is used for any property in CSS. In other words, it is not only tied to the position property.
+</p>
+<p>
+    Basically, using the value of initial with any CSS property simply means that you want the browser to revert back to the default setting for that property.
+</p>
+<p>
+    Giving an element a value of position: initial is the same as if we gave it position: static, as position: static is the default value for all HTML elements.
+</p>
 
