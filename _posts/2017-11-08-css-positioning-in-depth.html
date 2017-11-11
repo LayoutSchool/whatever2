@@ -121,6 +121,7 @@ Using static positioning, you cannot offset elements with top, right, bottom, an
     <li>If an element inherits the property from a parent element, using unset CSS value will revert the property to the inherited value.</li>
     <li>If an element does not inherit the property from its parent element, using unset CSS value will revert the property to the initial value.</li>
 </ul>
-<p>In the specific case of position property, we need to take a few things into account:</p>
+<p>In the specific case of position property, we need to remember that the position property does not cascade, and thus, looking at the above 2 if statements, the second if statement applies. Simply put, using position: unset will be the same as if we used position: static.</p>
 
-
+<p data-height="364" data-theme-id="0" data-slug-hash="LOWMXv" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="CSS positioning, unset" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/LOWMXv/">CSS positioning, unset</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
