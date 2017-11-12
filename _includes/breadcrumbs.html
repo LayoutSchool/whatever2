@@ -1,12 +1,12 @@
 <div class="container-fluid bg-light-gray">
     <div class="container">
         <div class="row">
-            <div class="col-12 pt-4 pb-4">
+            <div class="col-12 pt-2 pb-2">
 <!--
 https://stackoverflow.com/questions/9612235/what-are-some-good-ways-to-implement-breadcrumbs-on-a-jekyll-site
 -->
 {% unless page.hide-breadcrumbs %}
-<span class="text-secondary font14">
+<span class="text-secondary font14 crumbs">
     <a href="/">Home</a>
     {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
     {% for crumb in crumbs offset:1 %}
