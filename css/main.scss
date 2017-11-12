@@ -486,3 +486,10 @@ a.aotw {
 .crumbs {
      line-height: 15px;   
 }
+
+h2, h3, h4, h5, h6,
+.h2, .h3, .h4, .h5, .h6 {
+    padding: 16px 0 10px 5px;
+    color: tomato;
+    font-weight: 600;
+}
