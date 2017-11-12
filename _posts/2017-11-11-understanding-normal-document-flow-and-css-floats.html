@@ -4,7 +4,7 @@ title:  "Understanding Normal Document Flow and CSS Floats"
 date:   2017-11-11 06:33:40 +0200
 categories: ['guides']
 comments: true
-image: /img/2017/11/11/understanding-normal-document-flow-and-css-floats.png
+image: /img/2017/11/11/normal-document-flow.png
 excerpt_separator: <!--more-->
 show: true
 ---
@@ -26,12 +26,30 @@ A pre-requisite to being able to make CSS layouts is to understand the normal do
 </h2>
 
 <p>
-We can think of the normal document flow as the law of physics, specifically, the law of gravity. All elements on all webpages obey this rule. 
+We can think of the normal document flow as a river of content (i.e. HTML elements). 
 </p>
 
 <p>
-    This "law of gravity" says: When a web page is rendered by a browser, all the content in that web page will go left-to-right, top-to-bottom.
+    All the content on our page flows down this "river", left-to-right, then top-to-bottom.
 </p>
 
 <img class="img-fluid" src="{{ site.baseurl }}/img/2017/11/11/normal-document-flow-in-a-web-page.png" alt="Normal document flow in a web page">
+
+<p>
+    The caveat here is that some content will take up the full width of the screen, i.e. the full "left-to-right" portion of the "river". 
+</p>
+
+<p>
+    The div element is an example of such behavior. Regardless of how wide the div's content actually is, it will always take up the full width of the available screen. 
+</p>
+
+<p>
+    That's why the div element is referred as a block element. When we say that an HTML element is a block element, we are referring to it's display property.
+</p>
+
+<p>
+    In other words, some elements, referred to as block elements, will take up the full width of the available screen space, not allowing any other element to fit on either their left side, or their right side.
+</p>
+
+
 
