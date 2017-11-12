@@ -82,8 +82,8 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
     <li>Using floats</li>
 </ul>
 
-<h4 class="h3 mt-5">
-    Changing the value of the display property to position 2 divs next to each other
+<h4 class="h4 mt-5">
+    Changing the value of the display property to position two divs next to each other
 </h4>
 <p>
     Before we dive into this solution, it is important to note that there are many possible values that we can give our CSS display property. While divs and some other elements have the display: block; CSS declaration set by default, some other HTML elements have display: inline; set as their default.
@@ -96,8 +96,25 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 <p>
-    In the example above, we changed the display property of our divs to "inline".
+    In the example above, we have four divs. On the first two divs, we changed the display property to "inline", which places our divs next to one another.
 </p>
+<p> 
+    The above example also brings us to the interesting behavior of margins on elements that have display property set to inline.
+</p>
+
+<h4 class="h4 mt-5">
+    What happens with margins on DIVs that have display: inline?
+</h4>
+<p>
+    Besides not spanning the full width of the screen, there are also other differences between block level elements and inline elements. What follows is a list of things that are specific to inline elements:
+</p>
+<ul>
+    <li>Setting the width and height property on inline elements will not change anything.</li>
+    <li>Setting the padding and/or margin property on inline elements will only affect the horizontal axis.</li>
+</ul>
+
+<p>Let's see an example of this in practice:</p>
+
 
 
 
