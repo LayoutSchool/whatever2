@@ -99,7 +99,7 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
     In the example above, we have four divs. On the first two divs, we changed the display property to "inline", which places our divs next to one another.
 </p>
 <p> 
-    The above example also brings us to the interesting behavior of margins on elements that have display property set to inline.
+    The above example also shows us the interesting behavior of margins, paddings, and dimensions, on elements that have display property set to inline.
 </p>
 
 <h4 class="h4 mt-5">
@@ -110,7 +110,8 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
 </p>
 <ul>
     <li>Setting the width and height property on inline elements will not change anything.</li>
-    <li>Setting the padding and/or margin property on inline elements will only affect the horizontal axis.</li>
+    <li>Setting the margin property on inline elements will only affect the horizontal axis.</li>
+    <li>Setting the padding property on inline elements will affect both the x and the y axis, but will not work as expected because display: inline warps the box model.</li>
 </ul>
 
 <p>Let's see an example of setting these properties on inline elements:</p>
@@ -123,7 +124,40 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
 </p>
 
 <p>
-    However, since the box model is essentially broken (or at least, significantly warped), it is best to assign padding, margin, and dimensions only to inline blocks' wrapping elements.
+    However, since the box model on inline elements is essentially broken (or at least, significantly warped), it is best to assign padding, margin, and dimensions only to inline blocks' wrapping elements, and thus avoid these issues.
+</p>
+
+<h4 class="h4 mt-5">
+    Introducing the inline-block value for the display property
+</h4>
+<p>
+    So far, we've seen the display: block and the display: inline property. However, there are quite a few more.
+</p>
+<p>
+    To become familiar with what is available, let's list all the possible values of the display property: 
+</p>
+<ul>
+    <li>box, inline-box, block, contents, flex, flow-root, grid, inheirt, initial, inline, inline-block, inline-flex, inline-grid, inline-table, list-item, none, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group, unset</li>
+</ul>
+<p>
+    In the above list, there are possible 26 values for the display property.
+</p>
+
+<p>
+    At this point, we will focus on inline-block.
+</p>
+<p>
+    The benefit of using inline-block is simple: it supports using the box model. However, it also has downsides, namely in obeying whitespace.
+</p>
+<p>
+    Put differently, using inline-block on divs allows you to use a div as an inline element that <em>honors</em> the box model, but that element will <em>also</em> honor whitespace.
+</p>
+<p>
+    Here is what we get in practice:
 </p>
 
 
+
+<p>
+    asdf
+</p>
