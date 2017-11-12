@@ -137,10 +137,12 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
     To become familiar with what is available, let's list all the possible values of the display property: 
 </p>
 <ul>
-    <li>box, inline-box, block, contents, flex, flow-root, grid, inheirt, initial, inline, inline-block, inline-flex, inline-grid, inline-table, list-item, none, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group, unset</li>
+    <li>box, inline-box, block, contents, flex, flow-root, grid, inherit, initial, inline, inline-block, inline-flex, inline-grid, inline-table, list-item, none, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group, unset</li>
+    <li>box, inline-box, , contents, , flow-root, , , , , , , , , list-item, , , , , , , , , , , </li>
+
 </ul>
 <p>
-    In the above list, there are possible 26 values for the display property.
+    In the above list, there are 26 possible values for the display property.
 </p>
 
 <p>
@@ -156,8 +158,166 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
     Here is what we get in practice:
 </p>
 
+<p data-height="346" data-theme-id="0" data-slug-hash="jammvp" data-default-tab="html,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="Using display: inline-block on divs adds box model AND whitespace" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/jammvp/">Using display: inline-block on divs adds box model AND whitespace</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>
+    Let's discuss the example above. First, you can see that we have two sets of divs there. These two sets of divs are identical, as in, the second div is a copy-paste of the first div.
+</p>
+<p>
+    However, looking at the screen output of the HTML code to the left, we can see that there is a small portion of whitespace between the first and the second div. 
+</p>
+<p>
+    Contrast that to the second set of divs, where the divs are not touching, even though the code is 99% identical. The only difference between the two sets of divs?
+</p>
+<p>
+    The actual markup on the second set of divs does not include any whitespace between the individual divs.
+</p>
+<p>
+    We have just explained both the problem with inline-block value on display property, and the solution to this problem.
+</p>
+<p>
+    Thus, if you ever find yourself scretching your head as to why an element with display:inline-block is behaving strange, it is probably the case of <strong>whitespace between elements</strong>.
+</p>
+<p>
+    There is an alternative solution to this as well, and it might prove worth using depending on the specific layout you're working on.
+</p>
+<p>
+    The alternative solution involves declaring font-size: 0 on the parent element.
+</p>
+<p>
+    Here is the example for this approach. Similar to the previous example, we use two <strong>identical</strong> sets of divs. The only difference is that the second set's wrapper has an additional CSS class of <em>fs0</em>.
+</p>
+
+<p>
+    The result is just what we need: the inline-block elements are behaving just as they should.    
+</p>
+<h4 class="h4 mt-5">
+    Making sense of 26 possible display property values
+</h4>
+<p>
+    At this point, we have looked at <strong>display: block</strong>, <strong>display: inline</strong>, and <strong>display: inline-block</strong>.
+</p>
+<p>
+    How do we make sense of so many other possible values? It's simple, we'll divide and concquer!
+</p>
+<p>
+    Instead of looking at the long list of values, we will group them in the following way:
+</p>
+
+
+
+
+
+<!-- begin table -->
+<table >
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+  <tr>
+    <th>Block</th>
+    <th>Flex and Grid</th>
+    <th>Table</th>
+    <th>"Exotic"</th>
+    <th>CSS-wide</th>
+  </tr>
+  <tr>
+    <td>block</td>
+    <td>flex</td>
+    <td>table</td>
+    <td>box</td>
+    <td>inherit</td>
+  </tr>
+  <tr>
+    <td>inline-block</td>
+    <td>inline-flex</td>
+    <td>inline-table</td>
+    <td>inline-box</td>
+    <td>initial</td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>grid</td>
+    <td>table-caption</td>
+    <td>contents</td>
+    <td>unset</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>inline-grid</td>
+    <td>table-cell</td>
+    <td>flow-root</td>
+    <td>none</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>table-column</td>
+    <td>list-item</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>table-column-group</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>table-footer-group</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>table-header-group</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>table-row</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>table-row-group</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<!-- end table -->
+
+
+
+
 
 
 <p>
-    asdf
+    Looking at the table above, it is much easier to reason about the display property now.
+</p>
+
+<p>
+    Basically, what we have done is, we have divided all the values into logical, meaningful sub-groups:
+</p>
+<ul>
+    <li>Block: includes the "regular" block, inline-block, and inline values</li>
+    <li>Flex and Grid: inludes the more recent CSS layout specifications</li>
+    <li>Table: all the values we can use to make our elements display as if they were HTML tables</li>
+    <li>"Exotic": used less frequently, most people don't know about these</li>
+    <li>CSS-wide: values that are used on almost all CSS properties (not just display)</li>
+</ul>
+
+<p>
+    For the rest of this article, we will focus our attention on <strong>float</strong> property, and they way it works with the <strong>"block group"</strong> of values for the display property.
 </p>
