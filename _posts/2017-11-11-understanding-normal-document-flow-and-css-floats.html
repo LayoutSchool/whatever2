@@ -57,11 +57,46 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 <p>
-    Note that even though That's why the div element is referred to as a block-level element. When we say that an HTML element is a block-level element, we are referring to it's display property.
+    That's why the div element is referred to as a block-level element. When we say that an HTML element is a block-level element, we are referring to it's display property.
 </p>
 
 <p>
     In other words, some elements, referred to as block-level elements, will take up the full width of the available screen space, not allowing any other element to fit on either their left side, or their right side.
+</p>
+
+<p>
+    This leads us to an obvious question: Given the default behavior of block-level elements, including divs, how do we then fit two divs next to each other? 
+</p>
+
+<h3 class="h3 mt-5">
+    Ways to place two divs side-by-side
+</h3>
+<p>
+    There are many ways to achieve this. However, since this article is dealing with the display, float, and normal document flow, we will focus on these.
+</p>
+<p>
+    Specifically, we will look at two different ways of making 2 divs fit side-by-side, rather than stack on top of one another. These two ways are:
+</p>
+<ul>
+    <li>Changing the value of the display property</li>
+    <li>Using floats</li>
+</ul>
+
+<h4 class="h3 mt-5">
+    Changing the value of the display property to position 2 divs next to each other
+</h4>
+<p>
+    Before we dive into this solution, it is important to note that there are many possible values that we can give our CSS display property. While divs and some other elements have the display: block; CSS declaration set by default, some other HTML elements have display: inline; set as their default.
+</p>
+<p>
+    Thus, by virtue of changing the display value to something other than "block", we can get our desired effect, as can be seen in the next example:
+</p>
+
+<p data-height="277" data-theme-id="0" data-slug-hash="VrbmLZ" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="Using display: inline on divs" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/VrbmLZ/">Using display: inline on divs</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>
+    In the example above, we changed the display property of our divs to "inline".
 </p>
 
 
