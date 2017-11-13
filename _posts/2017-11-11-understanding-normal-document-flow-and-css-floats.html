@@ -174,35 +174,35 @@ We can think of the normal document flow as a river of content (i.e. a "river" o
     However, looking at the screen output of the HTML code to the left, we can see that there is a small portion of whitespace between the first and the second div. 
 </p>
 <p>
-    Contrast that to the second set of divs, where the divs are not touching, even though the code is 99% identical. The only difference between the two sets of divs?
+    Contrast that to the second set of divs, where the divs are not touching, even though the code is 99% identical. What's the only difference between the two sets of divs?
 </p>
 <p>
     The actual markup on the second set of divs does not include any whitespace between the individual divs.
 </p>
 <p>
-    We have just explained both the problem with inline-block value on display property, and the solution to this problem.
+    We have just explained both the problem with <code>display:inline-block</code>, and the solution to this problem.
 </p>
 <p>
-    Thus, if you ever find yourself scretching your head as to why an element with display:inline-block is behaving strange, it is probably the case of <strong>whitespace between elements</strong>.
+    Thus, if you ever find yourself scretching your head as to why an element that has <code>display:inline-block</code> is behaving strange, it is probably the case of <strong>whitespace between elements</strong>.
 </p>
 <p>
     There is an alternative solution to this as well, and it might prove worth using depending on the specific layout you're working on.
 </p>
 <p>
-    The alternative solution involves declaring font-size: 0 on the parent element.
+    The alternative solution involves declaring <code>font-size: 0</code> on the parent element.
 </p>
 <p>
-    Here is the example for this approach. Similar to the previous example, we use two <strong>identical</strong> sets of divs. The only difference is that the second set's wrapper has an additional CSS class of <em>fs0</em>.
+    Here is an example for this approach. Similar to the previous example, we use two <strong>identical</strong> sets of divs. The only difference is that the second set's wrapper has an additional CSS class of <code>fs0</code>.
 </p>
 
 <p>
-    The result is just what we need: the inline-block elements are behaving just as they should.    
+    The result is just what we need: the inline-block elements are not honoring whitespace, which is the behavior that we'd expect in the first place.    
 </p>
 <h4 class="h4 mt-5">
     Making sense of 26 possible display property values
 </h4>
 <p>
-    At this point, we have looked at <strong>display: block</strong>, <strong>display: inline</strong>, and <strong>display: inline-block</strong>.
+    At this point, we have looked at <code>display: block</code>, <code>display: inline</code>, and <code>display: inline-block</code>.
 </p>
 <p>
     How do we make sense of so many other possible values? It's simple, we'll divide and conquer!
@@ -315,42 +315,64 @@ We can think of the normal document flow as a river of content (i.e. a "river" o
     <li><strong>Block</strong>: includes the "regular" block, inline-block, and inline values</li>
     <li><strong>Flex and Grid</strong>: inludes the more recent CSS layout specifications</li>
     <li><strong>Table</strong>: all the values we can use to make our elements display as if they were HTML tables</li>
-    <li><strong>"Exotic"</strong>: used less frequently, most people don't know about these</li>
+    <li><strong>"Exotic"</strong>: used less frequently, most people don't know about these, or they are simply deprecated (like <code>box</code>)</li>
     <li><strong>CSS-wide</strong>: values that are used on almost all CSS properties (not just display)</li>
 </ul>
 
 <p>
-    For the rest of this article, we will focus our attention on <strong>float</strong> property, and they way it works with the <strong>"block group"</strong> of values for the display property.
+    For the rest of this article, we will focus our attention on <code>float</code> property, and they way it works with the <strong>"block group"</strong> of values for the display property.
 </p>
 
 <h3 class="h3 mt-5">
     CSS float property vs CSS display property
-</h4>
+</h3>
 <p>
-    It's time to discuss one of the most important concepts in CSS: the float property. 
+    It's time to discuss one of the most important concepts in CSS: the <code>float</code> property. 
 </p>
 
 <p>
     You can set the float property to:
 </p>
 <ul>
-    <li>left</li>
-    <li>right</li>
-    <li>none</li>
-    <li>inherit</li>
-    <li>initial</li>
-    <li>unset</li>
+    <li><code>left</li></code>
+    <li><code>right</li></code>
+    <li><code>none</li></code>
+    <li><code>inherit</li></code>
+    <li><code>initial</li></code>
+    <li><code>unset</li></code>
 </ul>
 
 <p>
     Setting the float to right or left, will force the display to take the value of block, with a few specific consequences:
 </p>
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>the floated element will become displayed as as block, but will not take up the full width of the screen</li>
+    <li>the element that comes after the floated element will start at the top and will need to be cleared.</li>
+    <li>the floated element's parent will not be "aware" of the floated element's height</li>
 </ul>
 
 <p>
-    It's time to discuss one of the most important concepts in CSS: the float property. 
+    That's a lot of concepts, so let's look at an example: 
+</p>
+
+<p data-height="409" data-theme-id="0" data-slug-hash="MOmzPY" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="Behavior of float:left or float:right" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/MOmzPY/">Behavior of float:left or float:right</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>
+    Looking at the example above, we can draw a number of conclusions:
+</p>
+<ul>
+    <li>The parent div's background is gray. The fact that the green-colored floated div is taller than it's parent is the proof that the parent div is not "aware" of the floated div's height</li>
+    <li>The second group of divs, which is 99% identical to the first group, is awkwardly positioned to the right of the first floated div, under the first group of pink divs. This is an example of why those div's need to be cleared.</li>
+    <li>The second group of divs honors whitespace, while the first group doesn't. Can you guess what's the pink divs' display property? Of course, it's inline-block. We are using a hack to fix this in the second group of divs. The hack is simple, we are using empty HTML comments. <small>Note: While the merit of empty HTML comments' hack can be debated, we've listed it here to further explain approaches that you'll be seeing online to the issue of <code>inline-block</code> not honoring whitespace.</small></li>
+</ul>
+<p>
+    The most important point of the above example is that the parent div is not aware of the height of it's child, and that we need to clear floats.
+</p>
+
+<h3 class="h3 mt-5">
+    Making the parent div aware of the height of the child div that has the float property 
+</h3>
+<p>
+    Consider the following example: 
 </p>
