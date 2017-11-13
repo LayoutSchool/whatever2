@@ -104,7 +104,7 @@ We can think of the normal document flow as a river of content (i.e. a "river" o
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 <p>
-    In the example above, we have four divs. On the first two divs, we changed the display property to "inline", which places our divs next to one another.
+    In the example above, we have four divs. On the first two divs, we assigned <code>display:inline</code>, which places our divs next to one another.
 </p>
 <p> 
     The above example also shows us the interesting behavior of margins, paddings, and dimensions, on elements that have display property set to inline.
@@ -119,7 +119,7 @@ We can think of the normal document flow as a river of content (i.e. a "river" o
 <ul>
     <li>Setting the width and height property on inline elements will not change anything.</li>
     <li>Setting the margin property on inline elements will only affect the horizontal axis.</li>
-    <li>Setting the padding property on inline elements will affect both the x and the y axis, but will not work as expected because display: inline warps the box model.</li>
+    <li>Setting the padding property on inline elements will affect both the x and the y axis, but will not work as expected because <code>display: inline</code> warps the box model.</li>
 </ul>
 
 <p>Let's see an example of setting these properties on inline elements:</p>
@@ -139,7 +139,7 @@ We can think of the normal document flow as a river of content (i.e. a "river" o
     Introducing the inline-block value for the display property
 </h4>
 <p>
-    So far, we've seen the display: block and the display: inline property. However, there are quite a few more.
+    So far, we've seen the <code>display: block</code> and the <code>display: inline</code> property. However, there are quite a few more.
 </p>
 <p>
     To become familiar with what is available, let's list all the possible values of the display property: 
@@ -152,13 +152,13 @@ We can think of the normal document flow as a river of content (i.e. a "river" o
 </p>
 
 <p>
-    At this point, we will focus on inline-block.
+    At this point, we will focus on <code>inline-block</code>.
 </p>
 <p>
-    The benefit of using inline-block is simple: it supports using the box model. However, it also has downsides, namely in obeying whitespace.
+    The benefit of using <code>inline-block</code> is simple: it supports using the box model. However, it also has downsides, namely in obeying whitespace.
 </p>
 <p>
-    Put differently, using inline-block on divs allows you to use a div as an inline element that <em>honors</em> the box model, but that element will <em>also</em> honor whitespace.
+    Put differently, using <code>inline-block</code> on divs allows you to use a div as an inline element that <em>honors</em> the box model, but that element will <em>also</em> honor whitespace.
 </p>
 <p>
     Here is what we get in practice:
