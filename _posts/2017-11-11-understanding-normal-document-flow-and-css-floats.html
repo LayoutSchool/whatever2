@@ -26,7 +26,11 @@ Before making HTML layouts, you need to understand the normal document flow of H
 </h2>
 
 <p>
-We can think of the normal document flow as a river of content (i.e. HTML elements). All the content on our page flows down this "river", left-to-right, then top-to-bottom.
+We can think of the normal document flow as a river of content (i.e. a "river" of HTML elements). All the content on our page flows down this "river", left-to-right, then top-to-bottom.
+</p>
+
+<p>
+    It is this default "flow" that determines how an HTML element will be displayed on a page.
 </p>
 
 <img class="img-fluid" src="{{ site.baseurl }}/img/2017/11/11/normal-document-flow.png" alt="Normal document flow in a web page">
@@ -36,8 +40,12 @@ We can think of the normal document flow as a river of content (i.e. HTML elemen
 </p>
 
 <p>
-    Many HTML elements behave this way, and the div element is one of them. These elements are referred to as block elements. Regardless of how wide a block element's content actually is, it will always take up the full width of the screen, and whatever follows it, will stack under it.
-</p> 
+    Many HTML elements behave this way, and the div element is one of them. These elements are referred to as block level elements. Regardless of how wide a block element's content actually is, it will always take up the full width of the screen, and whatever follows it, will stack under it.
+</p>
+
+<p>
+    Another way to think of it is that block level elements have an implicit line break at their edge.
+</p>
 
 <h3 class="h3 mt-5">
     Demo: Default Behavior of Block-level HTML Elements
