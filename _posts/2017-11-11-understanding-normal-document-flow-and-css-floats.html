@@ -381,3 +381,22 @@ We can think of the normal document flow as a river of content (i.e. a "river" o
 </p>
 <p data-height="265" data-theme-id="0" data-slug-hash="JOpOem" data-default-tab="css,result" data-user="AjdinImsirovic" data-embed-version="2" data-pen-title="Non-floated parent div wrapping a floated child div" class="codepen">See the Pen <a href="https://codepen.io/AjdinImsirovic/pen/JOpOem/">Non-floated parent div wrapping a floated child div</a> by Ajdin (<a href="https://codepen.io/AjdinImsirovic">@AjdinImsirovic</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p>
+    In the above example, we can see that the parent div does not wrap it's child div. In other words, the parent div is not "aware" of the child div's height.
+</p>
+<p>
+    The reason why this happens: The parent div does not contain a floated element. By the very definition, the floated element is not part of the normal document flow. It "floats" "above" it.
+</p>
+<p>
+    There are multiple ways to solve this:
+</p>
+<ul>
+    <li>Float the parent div too</li>
+    <li>Give the height to the parent div</li>
+    <li>Add another element and give it the <code>clear: both</code></li>
+    <li>Add <code>overflow: hidden</code> to parent.</li>
+    <li>Add <code>.clearfix</code> class on the parent div</li>
+    <li>Imitate a regular div, using a <code>display: inline-block</code></li>
+    <li>Give the parent div <code>display: table</code></li>
+    <li>Give the parent div pseudo-class of <code>:after</code> and add clearfix CSS there</li>
+</ul>
