@@ -132,6 +132,4 @@ To fully understand each of the given examples, let's explain how each example o
   </li>
 </ul>
 
-Check out the [Our Blog][ourblog-theme] bootstrap theme to see an example of a layout where this is implemented.
-
 [ourblog-theme]: {{ site.url }}/template-overviews/our-simple-blog
