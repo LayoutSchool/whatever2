@@ -157,7 +157,3 @@ What follows is a simple snippet of code that will extend the existing Bootstrap
 </div>
 
 Once the SCSS code compiles into CSS, you'll get a new class that did not exist in Bootstrap, called .button. The class will have all the CSS declarations that the default Bootstrap class of .btn has, plus the font-size of 30px.
-
-Check out the [Our Blog][ourblog-theme] bootstrap theme to see an example of a layout where this is implemented.
-
-[ourblog-theme]: {{ site.url }}/template-overviews/our-simple-blog
