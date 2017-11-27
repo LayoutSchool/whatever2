@@ -1,10 +1,10 @@
 # Site Settings
-title: JobFreeJourney.com
-email: contact@jobfreejourney.com
+title: LayoutSchool.com
+email: contact@layoutschool.com
 description: > # this means to ignore newlines until "baseurl:"
-  JobFreeJourney.com,  build income streams while working 9-to-5
+  LayoutSchool.com, a resource to get started with front-end development
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jobfreejourney.com" # the base hostname & protocol for your site
+url: "http://layoutschool.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -17,7 +17,7 @@ highlighter: rouge
 #Site Details
 license: ""
 license-url: ""
-author: "JobFreeJourney"
+author: "LayoutSchool"
 
 # Jekyll Redirect From Plugin for Redirects from redirect_from in template-overviews/blog-with-sidebar
 gems:
